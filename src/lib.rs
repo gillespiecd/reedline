@@ -63,7 +63,7 @@ mod engine;
 pub use engine::Reedline;
 
 mod history;
-pub use history::{History, HISTORY_SIZE};
+pub use history::{History, HISTORY_SIZE, HISTORY_PATH};
 
 mod history_search;
 

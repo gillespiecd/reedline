@@ -7,6 +7,7 @@ use std::{
 
 /// Default size of the [`History`] used when calling [`History::default()`]
 pub const HISTORY_SIZE: usize = 1000;
+pub const HISTORY_PATH: &str = "history.txt";
 
 /// Stateful history that allows up/down-arrow browsing with an internal cursor.
 ///

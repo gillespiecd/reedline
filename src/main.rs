@@ -3,6 +3,7 @@ use {
     reedline::{
         default_emacs_keybindings, DefaultHighlighter, DefaultPrompt, EditCommand, Reedline, Signal,
     },
+    reedline::{HISTORY_PATH, HISTORY_SIZE},
 };
 
 fn main() -> Result<()> {
@@ -16,7 +17,7 @@ fn main() -> Result<()> {
     );
 
     let mut line_editor = Reedline::new()
-        .with_history("history.txt", 5)?
+        .with_history(HISTORY_PATH, HISTORY_SIZE)?
         .with_edit_mode(if vi_mode {
             reedline::EditMode::ViNormal
         } else {
